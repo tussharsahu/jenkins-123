@@ -17,10 +17,10 @@ source cp -rf gunicorn.service /etc/systemd/system
 echo "$USER"
 echo "$PWD"
 
-sudo systemctl daemon-reload 
-sudo systemctl start gunicorn 
-sudo systemctl enable gunicorn
+ systemctl daemon-reload 
+ systemctl start gunicorn 
+ systemctl enable gunicorn
 
 echo "gunicorn setup done"
-sudo systemctl status gnicorn
-sudo systemctl restart gnicorn
+ systemctl status gnicorn
+ systemctl restart gnicorn
