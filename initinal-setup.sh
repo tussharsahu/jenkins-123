@@ -7,3 +7,13 @@ echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]" \
   /etc/apt/sources.list.d/jenkins.list > /dev/null
 sudo apt-get update
 sudo apt-get install jenkins
+
+sudo systemctl daemon-reload 
+sudo systemctl start jenkins
+ 
+sudo systemctl start nginx 
+sudo systemctl enable nginx
+sudo systemctl enable jenkins
+sudo systemctl status jenkins  
+
+
