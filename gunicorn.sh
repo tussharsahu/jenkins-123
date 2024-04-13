@@ -18,6 +18,7 @@ echo "$USER"
 echo "$PWD"
 
 SUDO_ASKPASS=./myaskpass.sh
+chmod +x myaskpass.sh
 export SUDO_ASKPASS
 
 
