@@ -11,21 +11,20 @@ echo "migrations done"
 
 cd /var/lib/jenkins/workspace/django
 
-SUDO_ASKPASS=./myaskpass.sh
-chmod +x myaskpass.sh
-export SUDO_ASKPASS
+chmod +rwx gunicorn.socket
+chmod +rwx gunicorn.sh
 
-sudo cp -rf gunicorn.socket /etc/systemd/system
-sudo cp -rf gunicorn.service /etc/systemd/system
+cp -rf gunicorn.socket /etc/systemd/system
+cp -rf gunicorn.service /etc/systemd/system
 
 echo "$USER"
 echo "$PWD"
 
- sudo -A systemctl daemon-reload
- sudo -A systemctl start gunicorn 
- sudo -A systemctl enable gunicorn
+ systemctl daemon-reload
+ systemctl start gunicorn 
+ systemctl enable gunicorn
 
  echo "gunicorn setup done"
- sudo -A systemctl status gnicorn
- sudo -A systemctl restart gnicorn
+ systemctl status gnicorn
+ systemctl restart gnicorn
 
