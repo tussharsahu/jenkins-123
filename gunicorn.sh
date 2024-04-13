@@ -11,6 +11,7 @@ echo "migrations done"
 
 cd /var/lib/jenkins/workspace/django
 
+
 cp -rf gunicorn.socket /etc/systemd/system
 cp -rf gunicorn.service /etc/systemd/system
 
