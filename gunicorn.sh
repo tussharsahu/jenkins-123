@@ -17,7 +17,8 @@ source cp -rf gunicorn.service /etc/systemd/system
 echo "$USER"
 echo "$PWD"
 
-export SUDO_ASKPASS= ./myaskpass.sh
+SUDO_ASKPASS=./myaskpass.sh
+export SUDO_ASKPASS
 
 
  echo "Aryan123#" | sudo -S systemctl daemon-reload
