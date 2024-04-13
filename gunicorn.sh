@@ -15,17 +15,17 @@ SUDO_ASKPASS=./myaskpass.sh
 chmod +x myaskpass.sh
 export SUDO_ASKPASS
 
-sudo cp -rf gunicorn.socket /etc/systemd/system
-sudo cp -rf gunicorn.service /etc/systemd/system
+sudo -S cp -rf gunicorn.socket /etc/systemd/system
+sudo -S cp -rf gunicorn.service /etc/systemd/system
 
 echo "$USER"
 echo "$PWD"
 
- sudo systemctl daemon-reload
- sudo systemctl start gunicorn 
- sudo systemctl enable gunicorn
+ sudo -S systemctl daemon-reload
+ sudo -S systemctl start gunicorn 
+ sudo -S systemctl enable gunicorn
 
  echo "gunicorn setup done"
- sudo systemctl status gnicorn
- sudo systemctl restart gnicorn
+ sudo -S systemctl status gnicorn
+ sudo -S systemctl restart gnicorn
 
