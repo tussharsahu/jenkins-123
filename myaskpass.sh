@@ -1,5 +1,7 @@
 #!/bin/bash 
 
+chmod +x myaskpass.sh
+
 echo "Aryan123#"
 
-chmod +x myaskpass.sh
+
