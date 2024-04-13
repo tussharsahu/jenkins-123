@@ -15,7 +15,7 @@ cd /var/lib/jenkins/workspace/django
 #chmod +x myaskpass.sh
 #export SUDO_ASKPASS
 
-echo "123456789" | sudo -S cp -rf gunicorn.socket /etc/systemd/system
+echo "12345678" | sudo -S cp -rf gunicorn.socket /etc/systemd/system
 sudo -S cp -rf gunicorn.service /etc/systemd/system
 
 echo "$USER"
