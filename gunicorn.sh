@@ -22,7 +22,7 @@ chmod +x myaskpass.sh
 export SUDO_ASKPASS
 
 
- echo "Aryan123#" | sudo -A systemctl daemon-reload
+ sudo -A systemctl daemon-reload
  sudo -A systemctl start gunicorn 
  sudo -A systemctl enable gunicorn
 
