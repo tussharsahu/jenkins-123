@@ -28,6 +28,7 @@ echo "$PWD"
  sudo systemctl enable gunicorn
 
  echo "gunicorn setup done"
- sudo systemctl status gnicorn
- sudo systemctl restart gnicorn
+ sudo systemctl status gunicorn
+ sudo systemctl restart gunicorn
+ echo "gunicorn Done"
 
