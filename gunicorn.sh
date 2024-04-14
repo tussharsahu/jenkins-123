@@ -21,6 +21,8 @@ sudo cp -rf gunicorn.service /etc/systemd/system
 echo "$USER"
 echo "$PWD"
 
+ sudo apt update
+ sudo apt install gunicorn
  sudo systemctl daemon-reload
  sudo systemctl start gunicorn 
  sudo systemctl enable gunicorn
