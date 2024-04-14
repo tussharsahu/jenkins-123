@@ -11,11 +11,11 @@ echo "migrations done"
 
 cd /var/lib/jenkins/workspace/django
 
-#SUDO_ASKPASS=./myaskpass.sh
-#chmod +x myaskpass.sh
-#export SUDO_ASKPASS
+SUDO_ASKPASS=./myaskpass.sh
+chmod +x myaskpass.sh
+export SUDO_ASKPASS
 
-echo "12345678" | sudo -S cp -rf gunicorn.socket /etc/systemd/system
+sudo -S cp -rf gunicorn.socket /etc/systemd/system
 sudo -S cp -rf gunicorn.service /etc/systemd/system
 
 echo "$USER"
