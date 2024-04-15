@@ -3,7 +3,7 @@
 sudo cp -rf app.conf /etc/nginx/conf.d 
 chmod 710 /var/lib/jenkins/workspace/django
 
-sudo nginx -t 
+sudo nginx -t
 
 #sudo apt update -y
 #sudo apt install nginx -y
