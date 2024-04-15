@@ -26,5 +26,13 @@ pipeline{
                 '''
             }
         }
+          stage('Docker image Build') {
+            steps {
+                script {
+                    def dockerfilePath = './Dockerfile'
+                    docker.build('myapp:latest', dockerfile: dockerfilePath)
+                }
+            }
+        }
     }
 }
