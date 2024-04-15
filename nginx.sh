@@ -13,3 +13,4 @@ sudo systemctl enable nginx
 echo "NGINX READY"
 sudo systemctl restart nginx  
 sudo systemctl status nginx
+echo "Done"
